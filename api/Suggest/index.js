@@ -12,7 +12,8 @@ const client = new SearchClient(
 );
 
 module.exports = async function (context, req) {
-
+    context.log(req);
+    
     // Reading inputs from HTTP Request
     const q = (req.query.q || (req.body && req.body.q));
     const top = (req.query.top || (req.body && req.body.top));
@@ -22,7 +23,7 @@ module.exports = async function (context, req) {
     var suggestions = await client.autocomplete(q, suggester, {top: parseInt(top)});
 
 
-   // context.log(suggestions);
+    context.log(suggestions);
 
     context.res = {
         // status: 200, /* Defaults to 200 */

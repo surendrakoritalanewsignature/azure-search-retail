@@ -72,7 +72,7 @@ const readFacets = (facetString) => {
 
 module.exports = async function (context, req) {
 
-    //context.log(req);
+    context.log(req);
 
     try {
         // Reading inputs from HTTP Request
