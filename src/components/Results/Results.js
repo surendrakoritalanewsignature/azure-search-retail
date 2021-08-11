@@ -20,7 +20,7 @@ export default function Results(props) {
   if (props.answers && props.answers.length > 0 && beginDocNumber === 1) {
     console.log("answer found");
     console.log(props.answers);
-    const answerDocument = props.documents.find(document => document.document.productID === props.answers[0].key);
+    const answerDocument = props.documents.find(document => document.document.ProductWDCode === props.answers[0].key);
     answer = <Answer answer={props.answers[0]} document={answerDocument?.document}></Answer>;
   } else {
     answer = null;

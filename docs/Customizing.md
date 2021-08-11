@@ -24,16 +24,16 @@ The JSX for the basic result looks like this:
 
 ```javascript
   <div className="card custom-result card-product-grid">
-      <Link to={`/details/${props.document.productID}`}>
-          <img className="card-img-top" src={image_url} alt={props.document.productName}></img>
+      <Link to={`/details/${props.document.ProductWDCode}`}>
+          <img className="card-img-top" src={image_url} alt={props.document.ProductDesc}></img>
           <div className="card-body text-center justify-content-center">
-              <h6>{props.document.productName}</h6>
+              <h6>{props.document.ProductDesc}</h6>
           </div>
       </Link>
   </div>
 ```
 
-The property `props.document` will contain all of the fields returned by your query. The properties `productID`, `image_url`, and `productName` all correspond to fields in the fabrikam fashion index and should be updated to reflect the fields in your own search index.
+The property `props.document` will contain all of the fields returned by your query. The properties `ProductWDCode`, `image_url`, and `ProductDesc` all correspond to fields in the fabrikam fashion index and should be updated to reflect the fields in your own search index.
 
 Beyond that, you can customize this component as much as you want depending on the needs of your application.
 

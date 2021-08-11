@@ -103,7 +103,7 @@ module.exports = async function (context, req) {
                 speller: "lexicon",
                 queryLanguage: searchQueryLanguage || "en-us",
                 answers: "extractive|count-3",
-                searchFields: ["productName", "description"]
+                searchFields: ["ProductDesc", "SyndigoProductName", "SyndigoMarketingDescription", "CategoryDesc"]
             };
         }
         else {

@@ -41,11 +41,11 @@ export default function Details() {
       resultStyle += " active";
       detailsBody = (
         <div className="card-body">
-          <h5 className="card-title">{document.productName}</h5>
+          <h5 className="card-title">{document.ProductDesc}</h5>
           <a href={document.productURL}>
-            <img className="image" src={document.img_url} alt="product"></img>
+            <img className="image" src={document.URL} alt="product"></img>
           </a>
-          <p className="card-text">{document.description}</p>
+          <p className="card-text">{document.SyndigoMarketingDescription}</p>
         </div>
       );
     }
